@@ -7,6 +7,8 @@ import (
 	"time"
 
 	sqlite "github.com/blessedsibanda263/sqlite_user"
+	"github.com/blessedsibanda263/sqlite_user/utils"
+	"github.com/blessedsibanda263/sqlite_user/utils/math"
 )
 
 var MIN = 0
@@ -33,6 +35,7 @@ func getString(length int64) string {
 }
 
 func main() {
+	fmt.Println(utils.Concat("Blessed", "Sibanda"))
 	sqlite.Filename = "data.db"
 	data, err := sqlite.ListUsers()
 	if err != nil {
@@ -100,4 +103,6 @@ func main() {
 		fmt.Println(err)
 	}
 
+	x := math.Add(1, 2)
+	fmt.Printf("1 + 2 = %d \n", x)
 }
