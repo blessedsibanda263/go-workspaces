@@ -1,0 +1,8 @@
+go 1.23.2
+
+use (
+	./util
+	./sqlite_user
+)
+
+replace github.com/blessedsibanda263/sqlite_user@v0.1.2 => ./sqlite_user
